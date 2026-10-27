@@ -1,20 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos</title>
+    <link rel="stylesheet" href="./css/eventos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+  <header>
+    <div class="nav">
+      <div class="nav-content">
+        <img src="./img/Logo Siex Events@1x.png" alt="Logo" />
+        <p>El momento es ahora, crecer también.</p>
+      </div>
+      <div class="btn">
+        
+        <a href="#" id="btnCerrar">Log out</a>
+      </div>
+    </div>
+  </header>
 
-<body>
-    <h1>bienvenido</h1>
-</body>
-<script>
-    var autorizado = localStorage.getItem('autorizado')
-    if (autorizado != "true") {
-        window.location = "./login/index.html"
-    }
-</script>
+  <body>
+    <div class="container">
+      <h1>Próximos Eventos</h1>
+      
+      <div class="card-h">
+        <div class="lado-1">
+          <img src="https://img.lalr.co/cms/2016/09/20144149/freddyvega.jpg?size=xs" alt="Conferencia AI" />
+          <h2>Conferencia AI de Jhon Freddy Vega</h2>
+        </div>
+        <div class="lado-2">
+          <p>Una charla sobre cómo la inteligencia artificial está cambiando la tecnología, el trabajo y la forma de aprender. Ven a conocer su visión y llévate ideas para aplicar la IA en tus propios proyectos.</p>
+          <a href="./descripcion.html">Ver más</a>
+        </div>
+      </div>
 
+      <div class="card-h">
+        <div class="lado-1">
+          <img src="./img/ciber.jpg" alt="Ciberseguridad" />
+          <h2>Workshop de Ciberseguridad</h2>
+        </div>
+        <div class="lado-2">
+          <p>Un taller práctico para aprender cómo se protegen los sistemas y cómo se detectan sus vulnerabilidades. Trabajarás con ejercicios guiados y saldrás con bases para empezar en seguridad informática.</p>
+          <a href="./descripcion.html">Ver más</a>
+        </div>
+      </div>
+
+      <div class="card-h">
+        <div class="lado-1">
+          <img src="./img/HACK.png" alt="Hackaton" />
+          <h2>Hackaton Siex 24H</h2>
+        </div>
+        <div class="lado-2">
+          <p>Una maratón de programación en equipos para resolver retos reales en 24 horas. Contarás con mentores y premios para los mejores proyectos, y pondrás a prueba tu creatividad y tu trabajo en equipo.</p>
+          <a href="./descripcion.html">Ver más</a>
+        </div>
+      </div>
+
+      <div class="card-h">
+        <div class="lado-1">
+          <img src="./img/finan.jpg" alt="Finanzas" />
+          <h2>Conferencia Siex de finanzas personales</h2>
+        </div>
+        <div class="lado-2">
+          <p>Una charla para aprender a organizar tu dinero, presupuestar, ahorrar y empezar a invertir con criterio. Ideal para estudiantes y jóvenes profesionales que quieren tomar mejores decisiones financieras.</p>
+          <a href="./descripcion.html">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        // 1. Validar que el usuario haya iniciado sesión
+        var autorizado = localStorage.getItem('autorizado');
+        if (autorizado != "true") {
+            window.location.href = "./login/index.html";
+        }
+
+        document.getElementById('btnCerrar').addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('autorizado');
+            window.location.href = "./index.html";
+        });
+    </script>
+  </body>
 </html>
