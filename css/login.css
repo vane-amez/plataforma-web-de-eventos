@@ -1,0 +1,80 @@
+        input {
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        #passw {
+            margin-top: 100px;
+        }
+
+        .campo {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        .campo span {
+            display: block;
+            text-align: left;
+            margin-top: 50px;
+            font-weight: bold;
+        }
+
+        .login {
+            margin-top: 200px;
+        }
+
+        .text-end {
+            margin-left: 1000px;
+        }
+
+        body {
+            background-color: #f0eeee;
+        }
+
+        .login-class {
+            background-color: rgb(211, 211, 211);
+            width: 100%;
+            max-width: 500px;
+            padding: 45px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .title {
+            display: flex;
+            text-align: center;
+            max-width: 100%;
+            margin: 0 auto;
+            margin-left: 35px;
+        }
+
+        .button-c {
+            text-align: center;
+        }
+
+        .campo span {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        #mensaje-error {
+            color: red;
+        }
+
+        header .text-end {
+            margin-left: auto;
+        }
+
+        @media (max-height: 800px) {
+            .login-class {
+                padding: 20px 14px;
+            }
+
+            .title {
+                font-size: 21px;
+            }
+        }
