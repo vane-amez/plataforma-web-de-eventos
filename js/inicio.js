@@ -3,7 +3,7 @@ function inicio() {
     var contrasena = document.getElementById("password").value;
     if (usuario == "admin" && contrasena == "admin") {
         localStorage.setItem("autorizado", "true");
-        window.location.href = "../eventos.html";
+        window.location.href = "./../eventos.html";
     } else {
         localStorage.setItem("autorizado", "false");
     }
